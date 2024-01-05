@@ -1,0 +1,37 @@
+[{
+    "projectTitle": "Personal Portfolio",
+    "details": "Portfolio website details",
+    "stack": [
+        "TypeScript",
+        "React",
+        "Gatsby"
+    ],
+    "source": "todo",
+    "demo": "todo",
+    "thumb": "/images/CAPSTONE-SHOWCASE.jpg"
+},
+{
+    "projectTitle": "Project Example 2",
+    "details": "Project Example Details",
+    "stack": [
+        "TypeScript",
+        "React",
+        "Gatsby"
+    ],
+    "source": "todo",
+    "demo": "todo",
+    "thumb": "/images/CAPSTONE-SHOWCASE.jpg"
+},
+{
+    "projectTitle": "Project Example 3",
+    "details": "Project Example Details",
+    "stack": [
+        "TypeScript",
+        "React",
+        "Gatsby"
+    ],
+    "source": "todo",
+    "demo": "todo",
+    "thumb": "/images/CAPSTONE-SHOWCASE.jpg"
+}
+]
