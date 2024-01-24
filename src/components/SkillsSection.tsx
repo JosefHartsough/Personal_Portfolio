@@ -54,7 +54,7 @@ export const Skills: React.FC = () => {
   const TabContent = ({ Icon, name }: IconProps) => (
     <li>
       <p>
-        <Icon />
+        {Icon && <Icon />}
       </p>
       <p>{name}</p>
     </li>

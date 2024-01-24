@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "gatsby";
 import { AiFillGithub } from "react-icons/ai";
 import { BsBoxArrowUpRight } from "react-icons/bs";
 import * as cardStyles from "../styles/FeatureCard/FeatureCard.module.css";
-import projectPlaceholderImage from "../images/feature_card_placeholder_pic.jpeg";
 
 interface FeatureCardProps {
   projectTitle: string;
@@ -13,51 +13,40 @@ interface FeatureCardProps {
   thumbnail?: string;
   inverted?: boolean;
   isReversed: boolean;
+  id: number;
 }
 
 const FeatureCard: React.FC<FeatureCardProps> = ({
+  id,
   projectTitle,
   details,
   stack,
   isReversed,
+  source,
 }) => {
-  const [detailsAnimation, setDetailsAnimation] = useState<boolean>(false);
+  const Image = require(`../images/${source}`).default;
   const [onHoverLink, setOnHoverLink] = useState<boolean>(false);
 
   const Card = () => {
     return (
       <div className={cardStyles.cardContainer}>
         <div className={cardStyles.card}>
-          <img
-            className={cardStyles.cardProjectImage}
-            src={projectPlaceholderImage}
-          />
+          <Link to={`/projects/${projectTitle.toLowerCase()}`}>
+            <img className={cardStyles.cardProjectImage} src={Image} />
+          </Link>
           <div className={cardStyles.cardInfo}>
             <h2 className={cardStyles.cardFeaturedProjectHeader}>
               Featured Project
             </h2>
             <h2 className={cardStyles.cardInfoProjectTitle}>{projectTitle}</h2>
-            <div
-              style={{
-                position: "relative",
-                right: detailsAnimation ? "50px" : "30px",
-                width: "500px",
-                borderRadius: "5px",
-                height: "70px",
-                zIndex: "2",
-                backgroundColor: "#1b1b1b",
-                color: "white",
-                transition: ".2s",
-                padding: "10px 10px",
-              }}
-              onMouseEnter={() => setDetailsAnimation(true)}
-              onMouseLeave={() => setDetailsAnimation(false)}
-            >
+            <div className={cardStyles.cardDetailsBar}>
               <p style={{ textAlign: "right" }}>{details}</p>
             </div>
             <div className={cardStyles.cardInfoTechStack}>
               {stack.map((item) => (
-                <h5 className={cardStyles.cardInfoTechStackText}>{item}</h5>
+                <h5 key={item} className={cardStyles.cardInfoTechStackText}>
+                  {item}
+                </h5>
               ))}
             </div>
             <div className={cardStyles.cardInfoLinks}>
@@ -92,27 +81,14 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
               <h2 className={cardStyles.cardInfoProjectTitle}>
                 {projectTitle}
               </h2>
-              <div
-                style={{
-                  position: "relative",
-                  left: detailsAnimation ? "50px" : "30px",
-                  width: "500px",
-                  borderRadius: "5px",
-                  height: "70px",
-                  zIndex: "2",
-                  backgroundColor: "#1b1b1b",
-                  color: "white",
-                  transition: ".2s",
-                  padding: "10px 10px",
-                }}
-                onMouseEnter={() => setDetailsAnimation(true)}
-                onMouseLeave={() => setDetailsAnimation(false)}
-              >
+              <div className={cardStyles.cardDetailsBar}>
                 <p style={{ textAlign: "right" }}>{details}</p>
               </div>
               <div className={cardStyles.cardInfoTechStack}>
                 {stack.map((item) => (
-                  <h5 className={cardStyles.cardInfoTechStackText}>{item}</h5>
+                  <h5 key={item} className={cardStyles.cardInfoTechStackText}>
+                    {item}
+                  </h5>
                 ))}
               </div>
               <div className={cardStyles.cardInfoLinks}>
@@ -131,10 +107,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
               </div>
             </div>
           </div>
-          <img
-            className={cardStyles.cardProjectImage}
-            src={projectPlaceholderImage}
-          />
+          <img className={cardStyles.cardProjectImage} src={Image} />
         </div>
       </div>
     );

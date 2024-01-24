@@ -1,0 +1,51 @@
+.slideShowwButton {
+  display: inline-block;
+  border-radius: 0.5rem;
+  background-color: #1d1f20;
+  color: white;
+  padding: 5px 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: grab;
+  font-weight: normal;
+  transition: background-color 0.3s ease;
+}
+
+.image {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.carousel {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+title {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  max-width: 1000px;
+}
+
+.carouselImageContainer {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  max-width: 1000px;
+  gap: 50px;
+}
+
+.carouselControls {
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  max-width: 1000px;
+  gap: 5px;
+}

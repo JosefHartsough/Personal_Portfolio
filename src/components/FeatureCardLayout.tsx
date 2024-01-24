@@ -16,23 +16,29 @@ export const FeatureCardLayout: React.FC = () => {
   const [features, setFeatures] =
     useState<FeatureCardLayoutProps[]>(featuresData);
 
-  const FeatureCardRender = features.map((item, index) => {
+  const FeatureCardRender = features.map((project, index) => {
     if (index === 1) {
       return (
         <FeatureCard
-          projectTitle={item.projectTitle}
-          details={item.details}
-          stack={item.stack}
+          key={index}
+          id={index}
+          projectTitle={project.projectTitle}
+          details={project.details}
+          stack={project.stack}
           isReversed={true}
+          source={project.source}
         />
       );
     } else {
       return (
         <FeatureCard
-          projectTitle={item.projectTitle}
-          details={item.details}
-          stack={item.stack}
+          key={index}
+          id={index}
+          projectTitle={project.projectTitle}
+          details={project.details}
+          stack={project.stack}
           isReversed={false}
+          source={project.source}
         />
       );
     }
@@ -44,7 +50,7 @@ export const FeatureCardLayout: React.FC = () => {
         marginTop: "100px",
       }}
     >
-      <h1 style={{ textAlign: "center" }}>Featured</h1>
+      <h1 style={{ textAlign: "center" }}>Featured Projects</h1>
       {FeatureCardRender}
     </div>
   );

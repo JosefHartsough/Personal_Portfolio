@@ -1,0 +1,28 @@
+[
+  {
+    "id": "0",
+    "name": "portfolio",
+    "title": "Portfolio",
+    "description": "Website to display my personal projects.",
+    "details": "I selected React, TypeScript, and Gatsby for building my personal portfolio website due to their inherent advantages. React's component-based architecture allows for efficient code reuse and modular development, making it ideal for creating dynamic and interactive UIs. TypeScript, with its static typing feature, enhances code quality by catching errors during development, which is crucial in maintaining large codebases.Lastly, Gatsby was chosen for its exceptional performance and speed, which are key factors in providing a smooth user experience on my portfolio site.",
+    "images": ["p_1", "p_2", "p_3"],
+    "techStack": ["Typescript", "React", "Gatsby"]
+   },
+    {
+      "id": "1",
+      "name": "goblinsacks",
+      "title": "Goblinsacks",
+      "description": "This is the second project.",
+      "images":[],
+      "techStack": []
+    },
+    {
+      "id": "2",
+      "name": "observy",
+      "title": "Observy",
+      "description": "This is the third project.",
+      "images":[],
+      "techStack": []
+    }
+   ]
+   

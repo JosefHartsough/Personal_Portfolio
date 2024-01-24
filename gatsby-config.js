@@ -1,12 +1,13 @@
 /** @type {import('gatsby').GatsbyConfig} */
 module.exports = {
   siteMetadata: {
-      title: ``,
-      siteUrl: `https://www.yourdomain.tld`,
+    title: `Josef Hartsough`,
+    siteUrl: `https://www.josefhartsough.dev`,
   },
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-  ]
-}
+    "gatsby-plugin-node-reload",
+  ],
+};

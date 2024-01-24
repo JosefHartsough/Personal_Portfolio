@@ -1,36 +1,38 @@
+
+
 [{
-    "projectTitle": "Personal Portfolio",
-    "details": "Portfolio website details",
+    "projectTitle": "Portfolio",
+    "details": "Portfolio website to showcase my personal projects.",
     "stack": [
         "TypeScript",
         "React",
         "Gatsby"
     ],
-    "source": "todo",
+    "source": "portfolio_1.png",
     "demo": "todo",
-    "thumb": "/images/CAPSTONE-SHOWCASE.jpg"
+    "thumb": "/images/portfolio_1.png"
 },
 {
-    "projectTitle": "Project Example 2",
+    "projectTitle": "Goblinsacks",
     "details": "Project Example Details",
     "stack": [
         "TypeScript",
         "React",
         "Gatsby"
     ],
-    "source": "todo",
+    "source": "portfolio_1.png",
     "demo": "todo",
     "thumb": "/images/CAPSTONE-SHOWCASE.jpg"
 },
 {
-    "projectTitle": "Project Example 3",
+    "projectTitle": "Observy",
     "details": "Project Example Details",
     "stack": [
         "TypeScript",
         "React",
         "Gatsby"
     ],
-    "source": "todo",
+    "source": "portfolio_1.png",
     "demo": "todo",
     "thumb": "/images/CAPSTONE-SHOWCASE.jpg"
 }
