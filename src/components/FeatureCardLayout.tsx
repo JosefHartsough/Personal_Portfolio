@@ -1,53 +1,30 @@
-import React, { useState } from "react";
+import React from "react";
 import FeatureCard from "./FeatureCard";
 
 import featuresData from "../data/projects.json";
 
-interface FeatureCardLayoutProps {
-  projectTitle: string;
-  details: string;
-  stack: string[];
-  source: string;
-  demo: string;
-  thumb: string;
-}
-
 export const FeatureCardLayout: React.FC = () => {
-  const [features, setFeatures] =
-    useState<FeatureCardLayoutProps[]>(featuresData);
-
-  const FeatureCardRender = features.map((project, index) => {
-    if (index === 1) {
-      return (
-        <FeatureCard
-          key={index}
-          id={index}
-          projectTitle={project.projectTitle}
-          details={project.details}
-          stack={project.stack}
-          isReversed={true}
-          source={project.source}
-        />
-      );
-    } else {
-      return (
-        <FeatureCard
-          key={index}
-          id={index}
-          projectTitle={project.projectTitle}
-          details={project.details}
-          stack={project.stack}
-          isReversed={false}
-          source={project.source}
-        />
-      );
-    }
+  const FeatureCardRender = featuresData.map((project, index) => {
+    const isReversed = index === 1 ? true : false;
+    return (
+      <FeatureCard
+        key={index}
+        id={index}
+        projectTitle={project.projectTitle}
+        details={project.details}
+        stack={project.stack}
+        isReversed={isReversed}
+        source={project.source}
+      />
+    );
   });
 
   return (
     <div
       style={{
         marginTop: "100px",
+        display: "flex",
+        flexDirection: "column",
       }}
     >
       <h1 style={{ textAlign: "center" }}>Featured Projects</h1>

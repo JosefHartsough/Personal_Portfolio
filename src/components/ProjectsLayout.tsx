@@ -8,44 +8,14 @@ export const ProjectsLayout: React.FC = () => {
       style={{
         display: "flex",
         justifyContent: "center",
-        alignItems: "center",
-        flexWrap: "wrap",
         flexDirection: "row",
         marginTop: "40px",
-        margin: "auto",
       }}
     >
       <div className={indexStyles.gridTesting}>
-        <Projects title="Warrior Welding Projects">
-          The #1 Independent news service in the world, battling globalism and
-          promoting a pro-human future worldwide. Infowars is Tomorrow's News
-          Today.
-        </Projects>
-        <Projects title="Warrior Welding Projects">
-          The #1 Independent news service in the world, battling globalism and
-          promoting a pro-human future worldwide. Infowars is Tomorrow's News
-          Today.
-        </Projects>
-        <Projects title="Warrior Welding Projects">
-          The #1 Independent news service in the world, battling globalism and
-          promoting a pro-human future worldwide. Infowars is Tomorrow's News
-          Today.
-        </Projects>
-        <Projects title="Warrior Welding Projects">
-          The #1 Independent news service in the world, battling globalism and
-          promoting a pro-human future worldwide. Infowars is Tomorrow's News
-          Today.
-        </Projects>
-        <Projects title="Warrior Welding Projects">
-          The #1 Independent news service in the world, battling globalism and
-          promoting a pro-human future worldwide. Infowars is Tomorrow's News
-          Today.
-        </Projects>
-        <Projects title="Warrior Welding Projects">
-          The #1 Independent news service in the world, battling globalism and
-          promoting a pro-human future worldwide. Infowars is Tomorrow's News
-          Today.
-        </Projects>
+        <Projects title="Project 1">Project 1 description...</Projects>
+        <Projects title="Project 2">Project 1 description...</Projects>
+        <Projects title="Project 3">Project 1 description...</Projects>
       </div>
     </div>
   );

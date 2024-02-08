@@ -12,14 +12,19 @@ const AboutMe: React.FC = () => {
           justifyContent: "center",
           height: "calc(80vh)",
           flexDirection: "column",
+          margin: "0 auto",
+          width: "800px",
         }}
       >
         <h1 style={{ position: "relative", right: "400px" }}>About me</h1>
         <div>
           <h1>Background</h1>
           <body>
-            My name is Josef Hartsough. Come back and fill this in with a bunch
-            of super cool and awesome things about myself.
+            My name is Josef Hartsough. Before pursuing a degree in Computer
+            Science, I served as an Infantry Leader in the Marines. I have
+            always had a passion for problem-solving and challenging myself. I
+            am constantly working on improving myself as a person and as a
+            programmer.
           </body>
           <h1>Education</h1>
           <body>
@@ -29,7 +34,8 @@ const AboutMe: React.FC = () => {
           </body>
           <h1>Experience</h1>
           <body>
-              Come back and fill this in with all my super cool experience as a developer.
+            Come back and fill this in with all my super cool experience as a
+            developer.
           </body>
         </div>
       </div>

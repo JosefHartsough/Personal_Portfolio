@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "gatsby";
 import { AiFillGithub } from "react-icons/ai";
 import { BsBoxArrowUpRight } from "react-icons/bs";
@@ -17,7 +17,6 @@ interface FeatureCardProps {
 }
 
 const FeatureCard: React.FC<FeatureCardProps> = ({
-  id,
   projectTitle,
   details,
   stack,
@@ -25,7 +24,6 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   source,
 }) => {
   const Image = require(`../images/${source}`).default;
-  const [onHoverLink, setOnHoverLink] = useState<boolean>(false);
 
   const Card = () => {
     return (
@@ -38,7 +36,14 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
             <h2 className={cardStyles.cardFeaturedProjectHeader}>
               Featured Project
             </h2>
-            <h2 className={cardStyles.cardInfoProjectTitle}>{projectTitle}</h2>
+            <h2 className={cardStyles.cardInfoProjectTitle}>
+              <Link
+                style={{ textDecoration: "none", color: "inherit" }}
+                to={`/projects/${projectTitle.toLowerCase()}`}
+              >
+                {projectTitle}
+              </Link>
+            </h2>
             <div className={cardStyles.cardDetailsBar}>
               <p style={{ textAlign: "right" }}>{details}</p>
             </div>
@@ -51,15 +56,17 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
             </div>
             <div className={cardStyles.cardInfoLinks}>
               <a
-                onMouseEnter={() => setOnHoverLink(true)}
-                onMouseLeave={() => setOnHoverLink(false)}
-                style={{ color: onHoverLink ? "steelblue" : "black" }}
+                className={cardStyles.socialLink}
                 target="_blank"
                 rel="noreferrer"
               >
                 <AiFillGithub size={30} style={{ marginRight: "20px" }} />
               </a>
-              <a target="_blank" rel="noreferrer">
+              <a
+                className={cardStyles.socialLink}
+                target="_blank"
+                rel="noreferrer"
+              >
                 <BsBoxArrowUpRight size={30} />
               </a>
             </div>
@@ -79,9 +86,14 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
                 Featured Project
               </h2>
               <h2 className={cardStyles.cardInfoProjectTitle}>
-                {projectTitle}
+                <Link
+                  style={{ textDecoration: "none", color: "inherit" }}
+                  to={`/projects/${projectTitle.toLowerCase()}`}
+                >
+                  {projectTitle}
+                </Link>
               </h2>
-              <div className={cardStyles.cardDetailsBar}>
+              <div className={cardStyles.cardDetailsBarReversed}>
                 <p style={{ textAlign: "right" }}>{details}</p>
               </div>
               <div className={cardStyles.cardInfoTechStack}>
@@ -93,15 +105,17 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
               </div>
               <div className={cardStyles.cardInfoLinks}>
                 <a
-                  onMouseEnter={() => setOnHoverLink(true)}
-                  onMouseLeave={() => setOnHoverLink(false)}
-                  style={{ color: onHoverLink ? "steelblue" : "black" }}
+                  className={cardStyles.socialLink}
                   target="_blank"
                   rel="noreferrer"
                 >
                   <AiFillGithub size={30} style={{ marginRight: "20px" }} />
                 </a>
-                <a target="_blank" rel="noreferrer">
+                <a
+                  className={cardStyles.socialLink}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <BsBoxArrowUpRight size={30} />
                 </a>
               </div>
