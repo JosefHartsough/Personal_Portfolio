@@ -6,9 +6,10 @@ import { BsLinkedin } from "react-icons/bs";
 export const Footer: React.FC = () => {
   return (
     <div className={footerStyles["container"]}>
-      <h1>Feel free to each out.</h1>
+      <h1>Feel free to reach out.</h1>
       <h3>Email</h3>
       <button
+        className={footerStyles["button"]}
         type="button"
         onClick={(e) => {
           e.preventDefault();
@@ -20,6 +21,7 @@ export const Footer: React.FC = () => {
       <h3>Other Platforms</h3>
       <div className={footerStyles["platforms"]}>
         <button
+          className={footerStyles["button"]}
           type="button"
           onClick={(e) => {
             e.preventDefault();
@@ -29,6 +31,7 @@ export const Footer: React.FC = () => {
           <AiFillGithub size={30} />
         </button>
         <button
+          className={footerStyles["button"]}
           type="button"
           onClick={(e) => {
             e.preventDefault();

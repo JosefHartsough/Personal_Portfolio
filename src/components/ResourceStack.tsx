@@ -35,6 +35,7 @@ export default function ResourceStack({ links }: ResourceStackProps) {
             justifyContent: "center",
             alignItems: "center",
             flexDirection: "column",
+            backgroundColor: "inherit",
           }}
         >
           <FaHome />
@@ -61,6 +62,7 @@ export default function ResourceStack({ links }: ResourceStackProps) {
             justifyContent: "center",
             alignItems: "center",
             flexDirection: "column",
+            backgroundColor: "inherit",
           }}
         >
           <FaGithub />
@@ -88,6 +90,7 @@ export default function ResourceStack({ links }: ResourceStackProps) {
             justifyContent: "center",
             alignItems: "center",
             flexDirection: "column",
+            backgroundColor: "inherit",
           }}
         >
           <FaExternalLinkAlt />

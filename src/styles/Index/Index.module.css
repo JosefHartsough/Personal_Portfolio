@@ -1,21 +1,12 @@
-/* * {
-  background-color: #333;
-  color: #fff;
-} */
-
 * {
-  font-style: Roboto;
+  color: #fff;
+  font-family: Nunito, sans-serif !important;
+  background-color: #181a1b;
 }
 
-/* // Dark/Light mode
-// .dark {
-//   background-color: #333;
-//   color: #fff;
-//  }
-//  .light {
-//   background-color: #fff;
-//   color: #333;
-//  } */
+.body {
+  background: orange;
+}
 
 .gridTesting {
   display: grid;

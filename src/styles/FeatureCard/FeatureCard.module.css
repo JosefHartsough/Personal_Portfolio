@@ -5,22 +5,6 @@
   margin-bottom: 80px;
 }
 
-/* @media (max-width: 500px) {
-  .cardContainer {
-    width: 50%;
-  }
-} */
-
-/* .card {
-  width: 900px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
-}
-
-@media (max-width: 500px) {
-} */
-
 .card {
   width: 900px;
   display: grid;
@@ -35,7 +19,6 @@
 
 .cardProjectImage {
   box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.15);
-  /* border: 0.1rem solid black; */
   width: 450px;
   height: 245px;
   border-radius: 0.5rem;
@@ -59,9 +42,6 @@
   margin: 1px;
   padding: 5px;
   color: #4682b4;
-  font-family:
-    Roboto Mono,
-    monospace;
   letter-spacing: -0.5px;
   font-size: 0.95rem;
   font-weight: 500;
@@ -69,7 +49,6 @@
 
 .cardInfoProjectTitle {
   margin: 5px;
-  font-family: Roboto, sans-serif;
   letter-spacing: 0.5px;
 }
 
@@ -81,10 +60,6 @@
 
 .cardInfoTechStackText {
   row-gap: 15px;
-  font-family:
-    Roboto Mono,
-    monospace;
-  font-weight: 2;
 }
 
 .cardInfoLinks {
@@ -99,10 +74,14 @@
   border-radius: 5px;
   height: 50px;
   z-index: 2;
-  background-color: #1b1b1b;
+  background-color: #1d1f20;
   color: white;
   transition: 0.2s;
   padding: 10px 10px;
+}
+
+.cardDetailsBar p {
+  background-color: #1d1f20;
 }
 
 @media (max-width: 500px) {
@@ -116,11 +95,15 @@
   border-radius: 5px;
   height: 50px;
   z-index: 2;
-  background-color: #1b1b1b;
+  background-color: #1d1f20;
   color: white;
   transition: 0.2s;
   padding: 10px 10px;
   left: 25px;
+}
+
+.cardDetailsBarReversed p {
+  background-color: #1d1f20;
 }
 
 @media (max-width: 500px) {

@@ -14,8 +14,8 @@ export const ProjectsLayout: React.FC = () => {
     >
       <div className={indexStyles.gridTesting}>
         <Projects title="Project 1">Project 1 description...</Projects>
-        <Projects title="Project 2">Project 1 description...</Projects>
-        <Projects title="Project 3">Project 1 description...</Projects>
+        <Projects title="Project 2">Project 2 description...</Projects>
+        <Projects title="Project 3">Project 3 description...</Projects>
       </div>
     </div>
   );

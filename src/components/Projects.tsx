@@ -1,13 +1,13 @@
-import React from 'react'
-import { AiOutlineFolder, AiOutlineFolderOpen } from 'react-icons/ai'
-import { AiFillGithub } from 'react-icons/ai'
-import { RiExternalLinkFill } from 'react-icons/ri'
+import React from "react";
+import { AiOutlineFolder, AiOutlineFolderOpen } from "react-icons/ai";
+import { AiFillGithub } from "react-icons/ai";
+import { RiExternalLinkFill } from "react-icons/ri";
 
-import * as styles from '../styles/Projects/card.module.css'
+import * as styles from "../styles/Projects/card.module.css";
 
 interface CardProps {
-  title: string
-  children: React.ReactNode
+  title: string;
+  children: React.ReactNode;
 }
 
 export const Projects: React.FC<CardProps> = ({ title, children }) => {
@@ -16,12 +16,12 @@ export const Projects: React.FC<CardProps> = ({ title, children }) => {
       <div className={styles.card}>
         <div className={styles.head}>
           <div className={styles.folderClosed}>
-            <AiOutlineFolder />
+            <AiOutlineFolder style={{ backgroundColor: "inherit" }} />
           </div>
           <div className={styles.folderOpen}>
-            <AiOutlineFolderOpen />
+            <AiOutlineFolderOpen style={{ backgroundColor: "inherit" }} />
           </div>
-          <a>
+          <a style={{ backgroundColor: "inherit" }}>
             <h3 className={styles.cardTitle}>{title}</h3>
           </a>
         </div>
@@ -29,14 +29,14 @@ export const Projects: React.FC<CardProps> = ({ title, children }) => {
           <p>{children}</p>
         </div>
         <div className={styles.foot}>
-          <a target='_blank' rel='noreferrer'>
+          <a className={styles.gihubIcon} target="_blank" rel="noreferrer">
             <AiFillGithub />
           </a>
-          <a target='_blank' rel='noreferrer'>
+          <a className="external_link_icon" target="_blank" rel="noreferrer">
             <RiExternalLinkFill />
           </a>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
